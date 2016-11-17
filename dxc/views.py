@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-# Create your views here.
+# Create your view here.
 
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -20,5 +20,9 @@ def index(request):
     else:  # 当正常访问时
         form = AddForm()
     return render(request, 'index.html', {'form': form})
+
+
+
+
 
 

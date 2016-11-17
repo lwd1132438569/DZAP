@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include,url
 from django.contrib import admin
+from dxc.view import account
 
 urlpatterns = [
     url(r'^dxc/', include('dxc.urls')),
+    url(r'^form1/', account.form1),
     url(r'^admin/', admin.site.urls),
 ]
