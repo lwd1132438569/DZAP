@@ -8,3 +8,8 @@ class AddForm(forms.Form):
 class Form1(forms.Form):
     user = forms.CharField()
     pwd = forms.CharField()
+
+class Dxc_input(forms.Form):
+    name = forms.CharField()
+    age = forms.IntegerField()
+    weight = forms.IntegerField()
