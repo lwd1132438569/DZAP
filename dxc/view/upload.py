@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 from django.shortcuts import HttpResponse,render
-from dxc.code import dxc_LinearRegression
+from dxc.code import dxc_LinearRegression,dxc_NN
 import os
 
 def upload(request):
@@ -13,6 +13,8 @@ def upload(request):
         # for chunk in myFile.chunks():      # 分块写入文件
         #     destination.write(chunk)
         # destination.close()
-        res = dxc_LinearRegression.lr(myFile)
+        # res = dxc_LinearRegression.lr(myFile)
+        # return HttpResponse("res success!:" + str(res))
+        res = dxc_NN.nn(myFile)
         return HttpResponse("res success!:" + str(res))
     return render(request, "dxc/upload.html")

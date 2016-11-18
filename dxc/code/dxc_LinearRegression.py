@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 # inputfile = '../data/sampling.xlsx'
 
-def lr(data):
-    data = pd.read_excel(data)  # 导入数据
+def lr(inputfile):
+    data = pd.read_excel(inputfile)  # 导入数据
     x = data.iloc[:,1:].as_matrix()
     y = data.iloc[:,0].as_matrix()
 
