@@ -3,7 +3,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# inputfile = '../data/sampling.xlsx'
+inputfile = '../data/sampling.xlsx'
 
 def lr(inputfile):
     data = pd.read_excel(inputfile)  # 导入数据
