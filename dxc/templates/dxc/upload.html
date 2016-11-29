@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href= "{% static "spark_h5/button.css" %}" media="screen">
 </head>
-<body>
-    <form enctype="multipart/form-data" action="/upload/" method="post">
-   <input type="file" name="myfile" />
-   <br/>
-   <input type="submit" value="upload"/>
-</form>
+<body style="margin-top:10px">
+<div style="text-align:center;clear:both;">
+</div>
+    <form enctype="multipart/form-data" action="/spark_upload/" method="post">
+	<input class="button gray"  type="file" name="myfile"/><div class="shine"></div></div>
+    <input class="button gray" type="submit" value="upload"/>
+    </form>
+</div>
+
 </body>
 </html>
