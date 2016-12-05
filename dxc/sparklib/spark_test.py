@@ -2,7 +2,8 @@
 
 from pyspark import SparkContext
 
-logFile = "D:\spark-2.0.2-bin-hadoop2.7\README.md"
+# logFile = "D:\spark-2.0.2-bin-hadoop2.7\README.md"
+logFile = "/Users/lwd/dev/spark-2.0.2-bin-hadoop2.7/README.md"
 sc = SparkContext("local","Simple App")
 logData = sc.textFile(logFile).cache()
 
