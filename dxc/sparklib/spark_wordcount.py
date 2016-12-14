@@ -34,7 +34,7 @@ def wordcount(inputfile):
         .getOrCreate()
     lines = spark.read.text(inputfile).rdd.map(lambda r: r[0])
     num = lines.count()
-    return  num
+    return num
 #     counts = lines.flatMap(lambda x: x.split(' ')) \
 #         .map(lambda x: (x, 1)) \
 #         .reduceByKey(add)
