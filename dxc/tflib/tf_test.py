@@ -31,3 +31,13 @@ correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
 
 print sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels})
+
+# merged_summary_op = tf.merge_all_summaries()
+# summary_writer = tf.train.SummaryWriter('/Users/lwd/dev/tflog', sess.graph)
+# total_step = 0
+# while training:
+#   total_step += 1
+#   session.run(training_op)
+#   if total_step % 100 == 0:
+#     summary_str = session.run(merged_summary_op)
+#     summary_writer.add_summary(summary_str, total_step)
