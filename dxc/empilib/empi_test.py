@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 #找重复值的SQL
-#SELECT z.patient_name name , COUNT(z.patient_name) FROM `zmap_r_patient` as z GROUP BY z.patient_name HAVING COUNT(z.patient_name) > 1 ;
+#SELECT z.patient_name name , COUNT(z.patient_name) num FROM `zmap_r_patient` as z GROUP BY z.patient_name HAVING COUNT(z.patient_name) > 1 order by num desc;
 
 import pandas as pd
 import matplotlib.pyplot as plt
