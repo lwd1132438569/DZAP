@@ -7,8 +7,9 @@ from dxc.empilib import empi_match
 def empi_input(request):
     if request.method=="POST":  #这里POST一定要大写
         #通常获取请求信息
-        a = request.POST.get("name",None)
-        res = empi_match.match(a)
+        name = request.POST.get("name",None)
+        sex = request.POST.get("sex", None)
+        res = empi_match.match(name,sex)
         #获取请求内容，做验证
         f = Empi_input(request.POST)  #request.POST：将接收到的数据通过Form1验证
         if f.is_valid():  #验证请求的内容和Form1里面的是否验证通过。通过是True，否则False。
