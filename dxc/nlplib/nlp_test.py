@@ -23,5 +23,5 @@ print('-'*40)
 print(' TextRank')
 print('-'*40)
 
-for x, w in jieba.analyse.textrank(s, withWeight=True):
-    print('%s %s' % (x, w))
+for x in jieba.analyse.textrank(s,3):
+    print('%s' % (x))

@@ -17,3 +17,4 @@ class Dxc_input(forms.Form):
 class Empi_input(forms.Form):
     name = forms.CharField()
     sex = forms.CharField()
+    addr = forms.CharField()
