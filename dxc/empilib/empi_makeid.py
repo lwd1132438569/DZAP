@@ -9,9 +9,18 @@ import pymysql
 import jieba
 import jieba.posseg
 import jieba.analyse
+import uuid
+s=set()
+def makeid():
+    while True:
+        a=str(uuid.uuid1())
+        b=a[:12]
+        if b not in s:
+            onlyid = b
+            s.add(b)
+            break
 
-# def makeid():
-
+    return onlyid
 def match(name,table_name):    #在具有多个姓名的记录中，
     conn = pymysql.connect(host='139.196.198.56', user='root', passwd='Jth2016', db='zmap_empi', charset='utf8')
     cur = conn.cursor()
@@ -21,10 +30,11 @@ def match(name,table_name):    #在具有多个姓名的记录中，
     result = cur.fetchall()  # result为tuple类型，记录存放是((),(),...()) 这样的形式
     for i in range(result.__len__()):
         if result[i][3] == '男':
-            query_man = "UPDATE " + "'" + table_name + "'" + "set empi_id=" + str(i*2.23456) + "where patient_name =" + "'" + name + "'"
+
+            query_man = "UPDATE " + table_name + "set empi_id=" + makeid() + "where patient_name =" + "'" + name + "'"
             cur.execute(query_man)
         else:
-            query_woman = "UPDATE " + "'" + table_name + "'" + "set empi_id=" + str(i*2.23456) + "where patient_name =" + "'" + name + "'"
+            query_woman = "UPDATE " + table_name + "set empi_id=" + makeid()+ "where patient_name =" + "'" + name + "'"
             cur.execute(query_woman)
 
 
@@ -54,7 +64,7 @@ for i in range(result.__len__()):
 
 for i in range(only1_name_list.__len__()):
     name = only1_name_list[i]
-    query = "UPDATE " + "'" + table_name + "'" + "set empi_id=" + str(i*1.23456) + "where patient_name =" + "'" + name + "'"
+    query = "UPDATE " + table_name + "set empi_id=" + makeid() + "where patient_name =" + "'" + name + "'"
     cur.execute(query)
     conn.commit()
 
