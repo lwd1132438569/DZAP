@@ -47,7 +47,7 @@ def addr_kw(addr):  # 命名的意思为addr_key words 即为地址关键词的�
 
 # def initid():
 table_name = 'zmap_r_patient'
-empi_id = ['111','222','333']
+
 
 conn = pymysql.connect(host='139.196.198.56', user='root', passwd='Jth2016', db='zmap_empi', charset='utf8')
 cur = conn.cursor()
