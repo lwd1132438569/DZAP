@@ -21,10 +21,10 @@ def match(name,table_name):    #在具有多个姓名的记录中，
     result = cur.fetchall()  # result为tuple类型，记录存放是((),(),...()) 这样的形式
     for i in range(result.__len__()):
         if result[i][3] == '男':
-            query_man = "UPDATE " + table_name + "set empi_id=" + str(i*2.23456) + "where patient_name =" + "'" + name + "'"
+            query_man = "UPDATE " + "'" + table_name + "'" + "set empi_id=" + str(i*2.23456) + "where patient_name =" + "'" + name + "'"
             cur.execute(query_man)
         else:
-            query_woman = "UPDATE " + table_name + "set empi_id=" + str(i*2.23456) + "where patient_name =" + "'" + name + "'"
+            query_woman = "UPDATE " + "'" + table_name + "'" + "set empi_id=" + str(i*2.23456) + "where patient_name =" + "'" + name + "'"
             cur.execute(query_woman)
 
 
@@ -43,7 +43,7 @@ empi_id = ['111','222','333']
 conn = pymysql.connect(host='139.196.198.56', user='root', passwd='Jth2016', db='zmap_empi', charset='utf8')
 cur = conn.cursor()
 
-sql_only1 = "SELECT z.patient_name name , COUNT(z.patient_name) num FROM " + table_name + "as z GROUP BY z.patient_name HAVING COUNT(z.patient_name) = 1 order by num desc"
+sql_only1 = "SELECT z.patient_name name , COUNT(z.patient_name) num FROM " + "'" + table_name + "'" + "as z GROUP BY z.patient_name HAVING COUNT(z.patient_name) = 1 order by num desc"
 cur.execute(sql_only1)      #这里，先找到名字不重复的所有字段
 conn.commit()
 result = cur.fetchall()
@@ -54,11 +54,11 @@ for i in range(result.__len__()):
 
 for i in range(only1_name_list.__len__()):
     name = only1_name_list[i]
-    query = "UPDATE " + table_name + "set empi_id=" + str(i*1.23456) + "where patient_name =" + "'" + name + "'"
+    query = "UPDATE " + "'" + table_name + "'" + "set empi_id=" + str(i*1.23456) + "where patient_name =" + "'" + name + "'"
     cur.execute(query)
     conn.commit()
 
-sql_more = "SELECT z.patient_name name , COUNT(z.patient_name) num FROM" + table_name + "as z GROUP BY z.patient_name HAVING COUNT(z.patient_name) > 1 order by num desc"
+sql_more = "SELECT z.patient_name name , COUNT(z.patient_name) num FROM" + "'" + table_name + "'" + "as z GROUP BY z.patient_name HAVING COUNT(z.patient_name) > 1 order by num desc"
 cur.execute(sql_more)        #这里，先找到名字不重复的所有字段
 conn.commit()
 result_m = cur.fetchall()
@@ -68,7 +68,7 @@ for j in range(result_m.__len__()):
 
 for j in range(more_name_list.__len__()):
     name = more_name_list[j]
-    query_m = "select * from" + table_name + "where name =" + "'" + more_name_list[j] + "'"
+    query_m = "select * from" + "'" + table_name + "'" + "where name =" + "'" + more_name_list[j] + "'"
 
 
 # query = "UPDATE zmap_r_patient set empi_id='拉拉' where patient_name =" + "'" + name + "'"
