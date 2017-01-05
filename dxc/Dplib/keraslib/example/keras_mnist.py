@@ -23,7 +23,7 @@ y_test = np_utils.to_categorical(y_test, nb_classes=10)
 # print X_train.shape[1]   #784
 # print X_train.shape      #(60000,784)
 
-Another way to build your neural net
+# Another way to build your neural net
 model = Sequential([
     Dense(32, input_dim=784),
     Activation('relu'),
