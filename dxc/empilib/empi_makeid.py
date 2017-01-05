@@ -37,7 +37,7 @@ def match(name,table_name):    #在具有多个姓名的记录中，
             cur.execute(query_woman)
 
 
-def addr_kw(addr):  # 命名的意思为addr_key words 即为地址关键词的提取。
+def addr_kw(addr):  # 命名的意思为addr_key words 即为地址关键词的获取。
     res_list = []
     for x in jieba.analyse.textrank(addr.strip(), 3):  # 记录很多地址都用空格进行了分割，去空格后可以增加分词的准确性。
         res_list.append(x)
