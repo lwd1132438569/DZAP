@@ -34,6 +34,8 @@ def match(name,sex,addr):
             cur.execute(query_insert)
             conn.commit()
 
+        res_final = str(res_final).replace('u\'', '\'')
+        res_final = res_final.decode("unicode-escape")
         return res_final
         # for i in range(result.__len__()):
         #         return result[i][2], result[i][3], result[i][8]
