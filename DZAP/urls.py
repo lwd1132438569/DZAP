@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import include,url
 from django.contrib import admin
-from dxc.view import account,dxc_input,upload,echart,spark_upload,empi_input
+from dxc.view import account,dxc_input,upload,echart,spark_upload,empi_input,empi_input_jb
 
 urlpatterns = [
     url(r'^dxc/', include('dxc.urls')),
@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^echart_1/',echart.bar),
     url(r'^spark_upload/',spark_upload.spark_upload),
     url(r'^empi_input/',empi_input.empi_input),
+    url(r'^empi_input_jb/',empi_input_jb.empi_input),
     url(r'^admin/', admin.site.urls),
 ]
 

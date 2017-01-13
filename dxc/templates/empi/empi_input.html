@@ -8,6 +8,8 @@
 <body>
     这是EMPI啊 小伙
     <form action="/empi_input/" method="POST">
+        {% csrf_token %}
+        {{ form }}
         <div>
             请输入姓名：
             <input type="text" name="name" placeholder="输入姓名"/>

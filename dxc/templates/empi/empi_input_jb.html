@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+        <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+        <link rel="stylesheet" type="text/css" href= "{% static "empi/empi_input.css" %}" media="screen">
+	</head>
+	<body height = "100%">
+		<header>
+			<h2>患者主索引</h2>
+		</header>
+		<hr/>
+		<section>
+			<form action="/empi_input_jb/" method="POST">
+                {% csrf_token %}
+                {{ form }}
+				<li>
+					 患者姓名：<input id="Hname" type="text" name="name">
+				</li>
+				<li>
+					性别:<input id="" type="radio" name="sex" value="male">男
+                        <input id="" type="radio" value="female">女
+				</li>
+				<li>
+					 家庭住址：<input id="Hadd" type="text" name="addr"><br>
+				</li>
+				<!--<input id="Hbutton" type="submit" value="查询">-->
+				<!--<button id="hide">查询</button>-->
+		    </form>
+		    <div style="text-align: center;"><button id="hide" >查询</button></div>
+		    <table class="Ifo">
+		    	<tr class="cap">
+		    		<th>患者ID</th>
+		    		<th>患者姓名</th>
+		    		<th>性别</th>
+		    		<th>地址</th>
+		    		<th>康复情况</th>
+		    	</tr>
+		    	<tbody>
+		    	<tr>
+		    		<td>2011.05.04</td>
+		    		<td>b22ss</td>
+		    		<td>11111</td>
+		    		<td>啦啦啦</td>
+		    		<td>良好</td>
+		    	</tr>
+		    	<tr>
+		    		<td>aa</td>
+		    		<td>bb</td>
+		    		<td>cc</td>
+		    		<td>dd</td>
+		    		<td>ee</td>
+		    	</tr>
+		    	<tr>
+		    		<td>aa</td>
+		    		<td>bb</td>
+		    		<td>cc</td>
+		    		<td>dd</td>
+		    		<td>ee</td>
+		    	</tr>
+		    	<tr>
+		    		<td>aa</td>
+		    		<td>bb</td>
+		    		<td>cc</td>
+		    		<td>dd</td>
+		    		<td>ee</td>
+		    	</tr>
+		    	</tbody>
+		    </table>
+		</section>
+	</body>
+	<script>
+$(document).ready(function(){
+	$("table").hide();
+  $("#hide").click(function(){
+    $("table").show();
+  });
+});
+  </script>
+</html>
