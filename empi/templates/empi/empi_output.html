@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+        <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+        <link rel="stylesheet" type="text/css" href= "{% static "empi/empi_input.css" %}" media="screen">
+	</head>
+
+<table class="Ifo" id="table">
+<tr class="cap">
+    <th>患者ID</th>
+    <th>患者姓名</th>
+    <th>性别</th>
+    <th>生日</th>
+    <th>地址</th>
+    <th>EMPI_ID</th>
+</tr>
+{% for i in res %}
+<tr>
+{%for j in i%}
+<td>{{ j }}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>

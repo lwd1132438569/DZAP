@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+        <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+		<!--{% load static from staticfiles %}-->
+		<link rel="stylesheet" type="text/css" href= "{% static "empi/empi_input_f.css" %}" media="screen">
+
+	</head>
+	<body height = "100%">
+		<header>
+			<h2>患者主索引</h2>
+		</header>
+		<hr>
+		<section>
+			<form action="/empi_input_f/" method="POST">
+				{% csrf_token %}
+				{{ form }}
+				<li>
+					<div class="img-contn"><img id="img-1" src="{% static "img/empi_input_f/left.png" %}" /></div>
+					<h3>患者姓名：</h3>
+					<input type="text" id="Hname" name="name" placeholder="*请输入姓名">
+					<div class="img-contn1"><img id="img-4" src="{% static "img/empi_input_f/right.png" %}" /></div>
+				</li>
+				<li>
+					<div class="img-contn"><img id="img-2" src="{% static "img/empi_input_f/left.png" %}" /></div>
+					<h3>患者性别：</h3>
+					<input  type="text" id="Hsex" name="sex" placeholder="*请输入性别">
+					<div class="img-contn1"><img id="img-5" src="{% static "img/empi_input_f/right.png" %}" /></div>
+
+				</li>
+				<li>
+					<div class="img-contn"><img id="img-3" src="{% static "img/empi_input_f/left.png" %}" /></div>
+					<h3>家庭住址：</h3>
+					<input  type="text" id="Hadd" name="addr" placeholder="*请输入家庭地址">
+					<div class="img-contn1"><img id="img-6" src="{% static "img/empi_input_f/right.png" %}" /></div>
+				</li>
+				<li>
+				    <div class="img-contn"><img id="img-7" src="" /></div>
+					<h3>出生日期：</h3>
+					<input  id="birthday" name="birthday" class="laydate-icon" placeholder="*请输入生日"/>
+					<div class="img-contn1"><img id="img-8" src="" /></div>
+				</li>
+				<div style="text-align: center;"><button  id="Hbutton" type="submit">查询</button></div>
+		    </form>
+
+			   <table >
+               {% for i in res %}
+			     <tr> {{ i} </tr>
+			   {% endfor %}
+				</table>
+		</section>
+	</body>
+	<script src="{% static "laydate/laydate.js" %}">
+		</script>
+		<script>
+			laydate({
+				elem:'#birthday'
+			});
+		</script>
+	<script>
+        $(document).ready(function() {
+        	console.log($("#Htime"));
+        	  console.log("1");
+              $("input").addClass("original");
+
+              $("#Hname").click(function() {
+              	console.log("2");
+              $("img").hide();
+           	  $(this).removeClass("required");
+           	  $(this).addClass("original");
+           	  $("#img-1").show();
+           	  $("#img-4").show();
+
+
+           });
+              $("#Hadd").click(function() {
+              $("img").hide();
+           	  $(this).removeClass("required");
+           	  $(this).addClass("original");
+           	  $("#img-3").show();
+           	  $("#img-6").show();
+           });
+              $("#Hsex").click(function() {
+              $("img").hide();
+           	  $(this).removeClass("required");
+           	  $(this).addClass("original");
+           	  $("#img-2").show();
+           	  $("#img-5").show();
+
+           });
+           $("#Htime").click(function() {
+              $("img").hide();
+           	  $(this).removeClass("required");
+           	  $(this).addClass("original");
+           	  $("#img-7").show();
+           	  $("#img-8").show();
+           });
+            $("#Hbutton").click(function() {
+            	console.log("3");
+            	$("img").hide();
+                var emptyfields = $("input[value=]");
+                if (emptyfields.size() > 0) {
+                	console.log("4");
+                    alert("请补充信息，至少输入姓名、性别和地址！");
+                    $("table").hide();
+
+                    emptyfields.each(function() {
+                    	$(this).removeClass("original");
+                        $(this)
+                            .addClass("required");
+                            console.log("补充");
+                            console.log($("#Htime"));
+                    });
+                }
+                else{
+                	console.log("搜索");
+//              	console.log($("#Htime"));
+//                  $('form').attr('action','#table').submit();
+                    $("table").show();
+                     console.log("4");
+                }
+            });
+        });
+  </script>
+</html>

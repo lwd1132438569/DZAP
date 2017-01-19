@@ -1,0 +1,556 @@
+@media only screen and (min-width:1200px ){
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size:16px;
+	/*padding-top: 10px;*/
+}
+
+header{
+	margin: 0 auto;
+	width: 80%;
+	background-image: url(../img/empi_input_f/beijing11.jpg);
+	padding-top: 3%;
+	padding-left: 2%;
+	padding-bottom: 2%;
+}
+h2{
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+hr{
+	margin: 0 auto;
+	width: 80%;
+}
+.required{
+	float: left;
+	width:30%;
+    padding:6px;
+    position:relative;
+    border: solid 1px #f00;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-left: 10%;
+    float: left;
+	display: inline;
+}
+.original{
+	float: left;
+    width:30%;
+    padding:6px;
+    position:relative;
+    border:solid 1px #666;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-left: 10%;
+    float: left;
+	display: inline;
+}
+.Ifo{
+	/*background-color: red;*/
+	display: none;
+	margin: 0 auto;
+	width: 97%;
+	border-color: yellow;
+	text-align: center;
+	border-collapse: separate;
+	border-left:#C8B9AE solid 1px;
+	border-top:#C8B9AE solid 1px;
+}
+.Ifo tbody{
+	
+}
+.Ifo td{
+   width:auto;
+   border-right:#C8B9AE solid 1px;
+   border-bottom:#C8B9AE solid 1px;
+   padding:10px 10px 6px;
+   vertical-align: top;
+}
+.cap{
+   background-color: #D7D1CB;
+   line-height: 40px;
+}
+form{
+	text-align: center;
+}
+form li{
+	list-style: none;
+	margin: 0 auto;
+	border-bottom: 1px solid #DFDFDF;
+    padding: 2% 0;
+    width:60%;
+    overflow:hidden;
+}
+
+h3 {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    /*margin: 6px 0 0 0;*/
+    padding:6px;
+    width: 15%;
+    margin-left:11%;
+    /*border: 2px solid yellow;*/
+        }
+}
+li .img-contn{
+	float: left;
+	width: 8%;
+	height: 10px;
+	/*background-color: red;*/
+	text-align: center;
+}
+li .img-contn1{
+	float: right;
+	width: 8%;
+	height: 10px;
+	margin-left: 20px;
+	/*background-color: red;*/
+	text-align: center;
+}
+#img-1,#img-2,#img-3{
+	float: left;	
+}
+#img-4,#img-5,#img-6{
+    float: right;
+}
+#img-1,#img-2,#img-3,#img-4,#img-5,#img-6{
+	margin-top: -8px;
+	display: none;
+}
+#Hbutton{
+	margin-top: 3%;
+	width: 20%;
+	height: 44px;
+	max-width: 250px;
+}
+#Hbutton{
+    font:15px Calibri, Arial, sans-serif;
+
+    /* A semi-transparent text shadow */
+    text-shadow:1px 1px 0 rgba(255,255,255,0.4);
+
+    /* Overriding the default underline styling of the links */
+    text-decoration:none !important;
+    white-space:nowrap;
+
+    display:inline-block;
+    vertical-align:baseline;
+    position:relative;
+    cursor:pointer;
+    padding:10px 20px;
+
+    /*background-repeat:no-repeat;*/
+
+    /* The following two rules are fallbacks, in case
+       the browser does not support multiple backgrounds. */
+
+    background-position:bottom left;
+    background-image: url(../img/empi_input_f/bg.png);
+
+    /* CSS3 background positioning property with multiple values. The background
+       images themselves are defined in the individual color classes */
+
+    background-position:bottom left, top right, 0 0, 0 0;
+    background-clip:border-box;
+
+    /* Applying a default border radius of 8px */
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    /* A 1px highlight inside of the button */
+
+    -moz-box-shadow:0 0 1px #fff inset;
+    -webkit-box-shadow:0 0 1px #fff inset;
+    box-shadow:0 0 1px #fff inset;
+
+    /* Animating the background positions with CSS3 */
+    /* Currently works only in Safari/Chrome */
+
+    -webkit-transition:background-position 1s;
+    -moz-transition:background-position 1s;
+    -o-transition:background-position 1s;
+    transition:background-position 1s;
+}
+
+#Hbutton:hover{
+
+    /* The first rule is a fallback, in case the browser
+       does not support multiple backgrounds
+    */
+
+    background-position:top left;
+    background-position:top left, bottom right, 0 0, 0 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size:14px;
+	/*padding-top: 10px;*/
+}
+
+header{
+	margin: 0 auto;
+	width: 80%;
+	background-image: url(../img/empi_input_f/beijing11.jpg);
+	padding-top: 3%;
+	padding-left: 2%;
+	padding-bottom: 2%;
+}
+hr{
+	margin: 0 auto;
+	width: 80%;
+}
+h2{ 
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+.required{
+	width:28%;
+    padding:6px;
+    position:relative;
+    border: solid 1px #f00;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-left: 11%;
+    float: left;
+	display: inline;
+   
+    
+}
+.original{
+    width:28%;
+    padding:6px;
+    position:relative;
+    border:solid 1px #666;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-left: 11%;
+    /*margin-right: 6%;*/
+    float: left;
+	display: inline;
+   
+}
+.Ifo{
+	/*background-color: red;*/
+	display: none;
+	margin: 0 auto;
+	width: 97%;
+	border-color: yellow;
+	text-align: center;
+	border-collapse: separate;
+	border-left:#C8B9AE solid 1px;
+	border-top:#C8B9AE solid 1px;
+}
+.Ifo tbody{
+	
+}
+.Ifo td{
+   width:auto;
+   border-right:#C8B9AE solid 1px;
+   border-bottom:#C8B9AE solid 1px;
+   padding:10px 10px 6px;
+   vertical-align: top;
+}
+.cap{
+   background-color: #D7D1CB;
+   line-height: 40px;
+}
+form{
+	text-align: center;
+}
+form li{
+	list-style: none;
+	margin: 0 auto;
+	border-bottom: 1px solid #DFDFDF;
+    padding: 2% 0;
+    width:75%;
+    overflow:hidden;
+}
+
+h3 {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding:5px;
+    width: 15%;
+    margin-left:10%;
+    /*border: 2px solid yellow;*/
+        }
+}
+li .img-contn{
+	float: left;
+	width: 8%;
+	height: 10px;
+	/*background-color: red;*/
+	text-align: center;
+}
+li .img-contn1{
+	float: right;
+	width: 8%;
+	height: 10px;
+	margin-left: 20px;
+	/*background-color: red;*/
+	text-align: center;
+}
+#img-1,#img-2,#img-3{
+	float: left;	
+}
+#img-4,#img-5,#img-6{
+    float: right;
+}
+#img-1,#img-2,#img-3,#img-4,#img-5,#img-6{
+	margin-top: -8px;
+	display: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size:14px;
+	/*padding-top: 10px;*/
+}
+
+header{
+	margin: 0 auto;
+	width: 100%;
+	background-image: url(../img/empi_input_f/beijing11.jpg);
+	padding-top: 3%;
+	padding-left: 2%;
+	padding-bottom: 2%;
+}
+hr{
+	margin: 0 auto;
+	width: 100%;
+}
+h2{ 
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+.required{
+	width:28%;
+    padding:6px;
+    position:relative;
+    border: solid 1px #f00;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-left: 11%;
+    float: left;
+	display: inline;
+    
+}
+.original{
+    width:28%;
+    padding:6px;
+    position:relative;
+    border:solid 1px #666;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-left: 11%;
+    float: left;
+	display: inline;
+}
+.Ifo{
+	/*background-color: red;*/
+	display: none;
+	margin: 0 auto;
+	width: 97%;
+	border-color: yellow;
+	text-align: center;
+	border-collapse: separate;
+	border-left:#C8B9AE solid 1px;
+	border-top:#C8B9AE solid 1px;
+}
+.Ifo tbody{
+	
+}
+.Ifo td{
+   width:auto;
+   border-right:#C8B9AE solid 1px;
+   border-bottom:#C8B9AE solid 1px;
+   padding:10px 10px 6px;
+   vertical-align: top;
+}
+.cap{
+   background-color: #D7D1CB;
+   line-height: 40px;
+}
+form{
+	text-align: center;
+}
+form li{
+	list-style: none;
+	margin: 0 auto;
+	border-bottom: 1px solid #DFDFDF;
+    padding: 2% 0;
+    width:90%;
+    overflow:hidden;
+}
+
+h3 {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding:4px;
+    width: 25%;
+    margin-left:6%;
+    /*border: 2px solid yellow;*/
+        }
+}
+li .img-contn{
+	float: left;
+	width: 8%;
+	height: 10px;
+	text-align: center;
+}
+li .img-contn1{
+	float: right;
+	width: 8%;
+	height: 10px;
+	margin-left: 20px;
+	/*background-color: red;*/
+	text-align: center;
+}
+#img-1,#img-2,#img-3{
+	float: left;	
+}
+#img-4,#img-5,#img-6{
+    float: right;
+}
+#img-1,#img-2,#img-3,#img-4,#img-5,#img-6{
+	margin-top: -8px;
+	display: none;
+}	
+@media only screen and (max-width:767px ) {
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size:10px;
+	/*padding-top: 10px;*/
+}
+
+header{
+	margin: 0 auto;
+	width: 100%;
+	background-image: url(../img/empi_input_f/beijing11.jpg);
+	padding-top: 3%;
+	padding-left: 2%;
+	padding-bottom: 2%;
+}
+hr{
+	margin: 0 auto;
+	width: 100%;
+}
+h2{ 
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+.required{
+	width:28%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position:relative;
+    border: solid 1px #f00;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-left: 2%;
+    float: left;
+	display: inline;
+    
+}
+.original{
+    width:28%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position:relative;
+    border:solid 1px #666;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    margin-left: 2%;
+    float: left;
+	display: inline;
+}
+.Ifo{
+	/*background-color: red;*/
+	display: none;
+	margin: 0 auto;
+	width: 97%;
+	border-color: yellow;
+	text-align: center;
+	border-collapse: separate;
+	border-left:#C8B9AE solid 1px;
+	border-top:#C8B9AE solid 1px;
+}
+.Ifo tbody{
+	
+}
+.Ifo td{
+   width:auto;
+   border-right:#C8B9AE solid 1px;
+   border-bottom:#C8B9AE solid 1px;
+   padding:10px 10px 6px;
+   vertical-align: top;
+}
+.cap{
+   background-color: #D7D1CB;
+   line-height: 40px;
+}
+form{
+	text-align: center;
+}
+form li{
+	list-style: none;
+	margin: 0 auto;
+	border-bottom: 1px solid #DFDFDF;
+    padding: 2% 0;
+    width:100%;
+    overflow:hidden;
+}
+
+h3 {
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    padding:4px;
+    width: 24%;
+    margin-left:11%;
+    /*border: 2px solid yellow;*/
+        }
+}
+li .img-contn{
+	float: left;
+	width: 8%;
+	height: 10px;
+	text-align: center;
+}
+li .img-contn1{
+	float: right;
+	width: 8%;
+	height: 10px;
+	margin-left: 20px;
+	/*background-color: red;*/
+	text-align: center;
+}
+#img-1,#img-2,#img-3{
+	float: left;	
+}
+#img-4,#img-5,#img-6{
+    float: right;
+}
+#img-1,#img-2,#img-3,#img-4,#img-5,#img-6{
+	margin-top: -8px;
+	display: none;
+}
+}
