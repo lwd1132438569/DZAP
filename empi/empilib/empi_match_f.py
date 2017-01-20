@@ -27,7 +27,7 @@ def match(name,sex,birthday,addr):
 
         for j in range(res.__len__()):
                 if set(addr_input).issubset(addr_kw(res[j][8])):
-                        res[j]=[res[j][1],res[j][2],res[j][3],res[j][5],res[j][8],res[j][42]]
+                        res[j]=[res[j][1],res[j][2],res[j][3],res[j][4],res[j][5],res[j][6],res[j][7],res[j][8],res[j][10],res[j][19],res[j][21],res[j][32],res[j][42]]
                         #res[j]=[res[j][0],res[j][1],res[j][2],res[j][3],res[j][5],res[j][11],res[j][14],res[j][18],res[j][19],res[j][21],res[j][32]]
                         if res[j] not in res_final:
                                 res_final.append(res[j])

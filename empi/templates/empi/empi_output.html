@@ -7,19 +7,29 @@
         <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
         <link rel="stylesheet" type="text/css" href= "{% static "empi/empi_input.css" %}" media="screen">
 	</head>
-
+<div style="text-align: center;"><button  id="Hbutton" type="submit">创建</button> <button  id="Hbutton" type="submit">合并EMPI</button></div>
 <table class="Ifo" id="table">
 <tr class="cap">
+    <th>操作</th>
     <th>患者ID</th>
     <th>患者姓名</th>
     <th>性别</th>
+    <th>身份证号</th>
     <th>生日</th>
+    <th>电话</th>
+    <th>婚否</th>
     <th>地址</th>
+    <th>保险号</th>
+    <th>民族</th>
+    <th>缴费类型</th>
+    <th>创建时间</th>
     <th>EMPI_ID</th>
 </tr>
 {% for i in res %}
 <tr>
+    <td><button>选择</button></td>
 {%for j in i%}
+
 <td>{{ j }}</td>
 {% endfor %}
 </tr>
