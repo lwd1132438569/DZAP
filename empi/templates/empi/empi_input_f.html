@@ -11,7 +11,7 @@
 	</head>
 	<body height = "100%">
 		<header>
-			<h2>患者主索引</h2>
+			<h2>EMPI</h2>
 		</header>
 		<hr>
 		<section>
@@ -47,21 +47,21 @@
 				<li>
 					<div class="img-contn"><img id="img-1" src="{% static "img/empi_input_f/left.png" %}" /></div>
 					<h3>患者ID：</h3>
-					<input type="text" id="Hname" name="patient_id" placeholder="请输入患者ID">
+					<input type="text"  name="patient_code" placeholder="请输入患者ID">
 					<div class="img-contn1"><img id="img-4" src="{% static "img/empi_input_f/right.png" %}" /></div>
 				</li>
 				<li>
 					<div class="img-contn"><img id="img-1" src="{% static "img/empi_input_f/left.png" %}" /></div>
 					<h3>身份证号：</h3>
-					<input type="text" id="Hname" name="patient_id" placeholder="请输入患者身份证号">
+					<input type="text"  name="id_card" placeholder="请输入患者身份证号">
 					<div class="img-contn1"><img id="img-4" src="{% static "img/empi_input_f/right.png" %}" /></div>
 				</li>
-				<li>
-					<div class="img-contn"><img id="img-1" src="{% static "img/empi_input_f/left.png" %}" /></div>
-					<h3>医保卡号：</h3>
-					<input type="text" id="Hname" name="patient_id" placeholder="请输入患者医保卡号">
-					<div class="img-contn1"><img id="img-4" src="{% static "img/empi_input_f/right.png" %}" /></div>
-				</li>
+				<!--<li>-->
+					<!--<div class="img-contn"><img id="img-1" src="{% static "img/empi_input_f/left.png" %}" /></div>-->
+					<!--<h3>医保卡号：</h3>-->
+					<!--<input type="text"  name="insure_id" placeholder="请输入患者医保卡号">-->
+					<!--<div class="img-contn1"><img id="img-4" src="{% static "img/empi_input_f/right.png" %}" /></div>-->
+				<!--</li>-->
 				<div style="text-align: center;"><button  id="Hbutton" type="submit">智能匹配</button></div>
 		    </form>
 

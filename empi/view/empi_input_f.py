@@ -10,9 +10,12 @@ def empi_input(request):
         name = request.POST.get("name",None)
         sex = request.POST.get("sex", None)
         addr = request.POST.get("addr", None)
+        # patient_code = request.POST.get("patient_code", None)
+        id_card = request.POST.get("id_card", None)
+        # insure_id = request.POST.get("insure_id", None)
         birthday = request.POST.get("birthday", None)
-        res = empi_match_f.match(name,sex,birthday,addr)
 
+        res = empi_match_f.match_id(name, sex, birthday, id_card, addr)
 
         #获取请求内容，做验证
         f = Empi_input_f(request.POST)  #request.POST：将接收到的数据通过Form1验证
