@@ -83,4 +83,5 @@ for j in range(more_name_list.__len__()):
 
 # query = "UPDATE zmap_r_patient set empi_id='拉拉' where patient_name =" + "'" + name + "'"
 # cur.execute(query)
+# conn.commit()
 
